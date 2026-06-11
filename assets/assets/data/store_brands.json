@@ -1,0 +1,60 @@
+{
+  "brands": [
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "logo": "amazon_logo.png",
+      "website": "https://www.amazon.com",
+      "categories": ["electronics", "fashion", "home_garden", "toys", "books"]
+    },
+    {
+      "id": "flipkart",
+      "name": "Flipkart",
+      "logo": "flipkart_logo.png",
+      "website": "https://www.flipkart.com",
+      "categories": ["electronics", "fashion", "home_garden", "toys"]
+    },
+    {
+      "id": "walmart",
+      "name": "Walmart",
+      "logo": "walmart_logo.png",
+      "website": "https://www.walmart.com",
+      "categories": ["groceries", "electronics", "fashion", "home_garden", "toys"]
+    },
+    {
+      "id": "target",
+      "name": "Target",
+      "logo": "target_logo.png",
+      "website": "https://www.target.com",
+      "categories": ["groceries", "fashion", "home_garden", "beauty", "toys"]
+    },
+    {
+      "id": "best_buy",
+      "name": "Best Buy",
+      "logo": "best_buy_logo.png",
+      "website": "https://www.bestbuy.com",
+      "categories": ["electronics", "automotive"]
+    },
+    {
+      "id": "kroger",
+      "name": "Kroger",
+      "logo": "kroger_logo.png",
+      "website": "https://www.kroger.com",
+      "categories": ["groceries"]
+    },
+    {
+      "id": "costco",
+      "name": "Costco",
+      "logo": "costco_logo.png",
+      "website": "https://www.costco.com",
+      "categories": ["groceries", "electronics", "home_garden"]
+    },
+    {
+      "id": "whole_foods",
+      "name": "Whole Foods",
+      "logo": "whole_foods_logo.png",
+      "website": "https://www.wholefoodsmarket.com",
+      "categories": ["groceries", "health"]
+    }
+  ]
+}

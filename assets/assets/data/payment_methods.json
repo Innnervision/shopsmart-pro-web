@@ -1,0 +1,53 @@
+{
+  "payment_methods": [
+    {
+      "id": "credit_card",
+      "name": "Credit Card",
+      "type": "credit_card",
+      "icon": "credit_card",
+      "supported_brands": ["Visa", "MasterCard", "American Express", "Discover"]
+    },
+    {
+      "id": "debit_card",
+      "name": "Debit Card",
+      "type": "debit_card",
+      "icon": "credit_card",
+      "supported_brands": ["Visa", "MasterCard"]
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "type": "paypal",
+      "icon": "paypal",
+      "supported_brands": []
+    },
+    {
+      "id": "upi",
+      "name": "UPI",
+      "type": "upi",
+      "icon": "upi",
+      "supported_brands": []
+    },
+    {
+      "id": "apple_pay",
+      "name": "Apple Pay",
+      "type": "apple_pay",
+      "icon": "apple",
+      "supported_brands": []
+    },
+    {
+      "id": "google_pay",
+      "name": "Google Pay",
+      "type": "google_pay",
+      "icon": "google",
+      "supported_brands": []
+    },
+    {
+      "id": "cash_on_delivery",
+      "name": "Cash on Delivery",
+      "type": "cash_on_delivery",
+      "icon": "local_shipping",
+      "supported_brands": []
+    }
+  ]
+}

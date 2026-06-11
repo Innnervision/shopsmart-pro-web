@@ -1,0 +1,36 @@
+{
+  "coupons": [
+    {
+      "code": "SAVE10",
+      "description": "10% off your first order",
+      "type": "percentage",
+      "value": 10,
+      "minimum_purchase": 25.00,
+      "expiry_days": 30
+    },
+    {
+      "code": "FREESHIP",
+      "description": "Free shipping on orders over $50",
+      "type": "free_shipping",
+      "value": 0,
+      "minimum_purchase": 50.00,
+      "expiry_days": 60
+    },
+    {
+      "code": "SAVE20",
+      "description": "$20 off orders over $100",
+      "type": "fixed",
+      "value": 20,
+      "minimum_purchase": 100.00,
+      "expiry_days": 45
+    },
+    {
+      "code": "WELCOME15",
+      "description": "15% off for new users",
+      "type": "percentage",
+      "value": 15,
+      "minimum_purchase": 0,
+      "expiry_days": 7
+    }
+  ]
+}

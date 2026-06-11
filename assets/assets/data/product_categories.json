@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "icon": "devices",
+      "subcategories": ["Smartphones", "Laptops", "Tablets", "Headphones", "Cameras"]
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion",
+      "icon": "checkroom",
+      "subcategories": ["Men's Clothing", "Women's Clothing", "Shoes", "Accessories", "Jewelry"]
+    },
+    {
+      "id": "groceries",
+      "name": "Groceries",
+      "icon": "shopping_basket",
+      "subcategories": ["Fresh Produce", "Dairy", "Bakery", "Meat", "Pantry"]
+    },
+    {
+      "id": "home_garden",
+      "name": "Home & Garden",
+      "icon": "home",
+      "subcategories": ["Furniture", "Decor", "Kitchen", "Garden", "Tools"]
+    },
+    {
+      "id": "beauty",
+      "name": "Beauty",
+      "icon": "face",
+      "subcategories": ["Skincare", "Makeup", "Haircare", "Fragrance", "Personal Care"]
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "icon": "sports_soccer",
+      "subcategories": ["Fitness", "Outdoor", "Team Sports", "Water Sports", "Cycling"]
+    },
+    {
+      "id": "toys",
+      "name": "Toys",
+      "icon": "toys",
+      "subcategories": ["Educational", "Action Figures", "Dolls", "Games", "Puzzles"]
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "icon": "menu_book",
+      "subcategories": ["Fiction", "Non-Fiction", "Educational", "Comics", "Audiobooks"]
+    },
+    {
+      "id": "automotive",
+      "name": "Automotive",
+      "icon": "directions_car",
+      "subcategories": ["Parts", "Accessories", "Tools", "Maintenance", "Electronics"]
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "icon": "medical_services",
+      "subcategories": ["Wellness", "Fitness", "Medical Supplies", "Vitamins", "Personal Care"]
+    }
+  ]
+}
