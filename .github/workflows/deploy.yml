@@ -15,12 +15,42 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  REPO_NAME: shopsmart-pro-web
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Update base href in index.html
+        run: |
+          sed -i 's|<base href="/">|<base href="/${REPO_NAME}/">|g' index.html
+          echo "Updated base href to /${REPO_NAME}/"
+          cat index.html | grep base
+
+      - name: Validate base href
+        run: |
+          if grep -q '<base href="/${REPO_NAME}/">' index.html; then
+            echo "✓ Base href correctly set to /${REPO_NAME}/"
+          else
+            echo "✗ Base href mismatch"
+            exit 1
+          fi
+
+      - name: Verify required files
+        run: |
+          required_files=("index.html" "flutter_bootstrap.js" "main.dart.js" "manifest.json" "favicon.png")
+          for file in "${required_files[@]}"; do
+            if [ -f "$file" ]; then
+              echo "✓ $file exists"
+            else
+              echo "✗ $file missing"
+              exit 1
+            fi
+          done
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -40,3 +70,35 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Validate deployment
+        run: |
+          sleep 30
+          url="https://innnervision.github.io/${REPO_NAME}"
+          echo "Validating deployment at $url"
+          
+          # Check flutter_bootstrap.js
+          if curl -f -s -o /dev/null "$url/flutter_bootstrap.js"; then
+            echo "✓ flutter_bootstrap.js accessible"
+          else
+            echo "✗ flutter_bootstrap.js not accessible"
+            exit 1
+          fi
+          
+          # Check manifest.json
+          if curl -f -s -o /dev/null "$url/manifest.json"; then
+            echo "✓ manifest.json accessible"
+          else
+            echo "✗ manifest.json not accessible"
+            exit 1
+          fi
+          
+          # Check main.dart.js
+          if curl -f -s -o /dev/null "$url/main.dart.js"; then
+            echo "✓ main.dart.js accessible"
+          else
+            echo "✗ main.dart.js not accessible"
+            exit 1
+          fi
+          
+          echo "✓ All deployment validation checks passed"
